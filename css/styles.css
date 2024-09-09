@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Style */
+header {
+    background-color: #d3d3d3; /* Light grey background */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #000; /* Border line at the bottom */
+}
+
+/* Navigation Menu Style */
+nav {
+    background-color: #d3d3d3; /* Light grey background */
+    padding: 10px;
+    border-bottom: 1px solid #000; /* Border line at the bottom */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Black text color */
+}
+
+/* Main Content Style */
+main {
+    padding: 0px;
+}
+
+/* Footer Style */
+footer {
+    background-color: #d3d3d3; /* Light grey background */
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #000; /* Border line at the top */
+}
+
+/* Restaurant Image */
+img {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    object-position: center;
+}
