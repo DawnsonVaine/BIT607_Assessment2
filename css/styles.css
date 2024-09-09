@@ -3,57 +3,126 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    background-color: red;
+    background-image: url("/images/body-bg.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 /* Header Style */
 header {
-    background-color: #d3d3d3; /* Light grey background */
+    background-color: black;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
     text-align: center;
-    border-bottom: 1px solid #000; /* Border line at the bottom */
+    border-bottom: 5px solid #000; /* Border line at the bottom */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
 /* Navigation Menu Style */
 nav {
-    background-color: #d3d3d3; /* Light grey background */
-    padding: 10px;
-    border-bottom: 1px solid #000; /* Border line at the bottom */
+    display: flex;
+    position: relative;
+    width: 550px;
+    height: 50px;
+    background-color: #ff913d;
+    border-radius: 8px;
+    font-size: 0;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
     text-decoration: none;
-    color: #000; /* Black text color */
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+/* Width of Each Nav Link */
+a:nth-child(1) { width: 100px; }
+a:nth-child(2) { width: 100px; }
+a:nth-child(3) { width: 150px; }
+a:nth-child(4) { width: 100px; }
+a:nth-child(5) { width: 100px; } 
+
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #97b60e;
+}
+nav .start-menu, a:nth-child(2):hover~.animation {
+    width: 100px;
+    left: 100px;
+    background-color: #e74c3c;
+}
+nav .start-reservations, a:nth-child(3):hover~.animation {
+    width: 150px;
+    left: 200px;
+    background-color: #135988;
+}
+nav .start-hours, a:nth-child(4):hover~.animation {
+    width: 100px;
+    left: 350px;
+    background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 450px;
+    background-color: #460b93;
 }
 
 /* Main Content Style */
 main {
+    background-color: transparent;
     padding: 0px;
+    margin: 0;
 }
 
 /* Footer Style */
 footer {
-    background-color: #d3d3d3; /* Light grey background */
-    padding: 10px;
+    background-color: black;
+    padding: 40px;
+    color: white;
     text-align: center;
-    border-top: 1px solid #000; /* Border line at the top */
+    border-top: 5px solid #000; /* Border line at the top */
+    margin: 0;
 }
 
 /* Restaurant Image */
-img {
+.image-container img {
+    display: block;
     width: 100%;
     max-height: 800px;
     object-fit: cover;
     object-position: center;
+    margin: 0;
+    padding: 0;
 }
