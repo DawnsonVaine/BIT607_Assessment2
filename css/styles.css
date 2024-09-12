@@ -47,7 +47,6 @@ body {
 }
 
 /* Navigation Menu */
-
 /* Desktop Version */
 
 .navbar input[type="checkbox"],
@@ -117,14 +116,41 @@ body {
     background-repeat: no-repeat;
 }
 
+.showcase-area-menu {
+  height: 50vh;
+  background: linear-gradient(
+    rgba(240, 240, 240, 0.144),
+    rgba(255, 255, 255, 0.336)
+  ),
+  url("/images/restaurant2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .showcase-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   font-size: 1.6rem;
-  color: white; /* Need to find better colour to match BG */}
+  color: white;
+  z-index: 1;               /* Ensures text appears in front of the background */
+}
+
+/* Darkened BG to read better */
+.showcase-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
 
 .main-title {
   text-transform: uppercase;
@@ -404,7 +430,7 @@ body {
 
 /* Media Query - Smaller Screens / Devices */
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .navbar {
     opacity: 0.95;
   }
@@ -478,6 +504,7 @@ body {
     padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     box-shadow: 5px 0px 10px 0px #aaa;
+    left: -100%;
   }
 
   .navbar .menu-items li {
@@ -495,10 +522,12 @@ body {
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
+    left:0;
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(35deg);
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
@@ -506,7 +535,8 @@ body {
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-35deg);
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
   }
 }
 
@@ -516,7 +546,8 @@ body {
   }
 
   .navbar .menu-items li{
-      font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .testimonial-container {

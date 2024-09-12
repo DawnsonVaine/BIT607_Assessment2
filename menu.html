@@ -1,37 +1,140 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Webpage Title -->
+    <title>Haukai Restaurant - Menu Page</title>
+
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="css/styles.css" />
+
 </head>
+
 <body>
-    <header>
-        <h1>Our Menu</h1>
-        <nav>
-            <ul>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+
+            <ul class="menu-items">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="hours.html">Hours</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="hours.html">Opening Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Food</h2>
-            <img src="dish.jpg" alt="Sample Dish" class="responsive-image">
-            <p>Dish Name: $12.99</p>
+            
+            <!-- Logo -->
+            <h1 class="logo">Haukai Restaurant</h1>
+        </div>
+    </nav>
 
-            <h2>Drinks</h2>
-            <img src="drink.jpg" alt="Sample Drink" class="responsive-image">
-            <p>Drink Name: $5.99</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Our Restaurant</p>
+    <!-- Showcase Section -->
+    <section class="showcase-area-menu" id="showcase">
+        <div class="showcase-container">
+            <h2 class="main-title" id="menu">Our Menu</h2>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="food-menu">
+      <div class="food-menu-container container">
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Food Menu Item 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+              quae.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img
+              src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Food Menu Item 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+              quae.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://i.postimg.cc/8zbCtYkF/food-menu3.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Food Menu Item 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+              quae.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Food Menu Item 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+              quae.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://i.postimg.cc/KYnDqxkP/food-menu5.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Food Menu Item 5</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+              quae.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Food Menu Item 6</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+              quae.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer Section-->
+    <footer id="footer">
+      <h2>Restraunt &copy; all rights reserved</h2>
     </footer>
 </body>
 </html>
