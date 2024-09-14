@@ -52,6 +52,7 @@ body {
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
+  cursor: pointer;
 }
 
 .navbar {
@@ -110,7 +111,7 @@ body {
       rgba(240, 240, 240, 0.144),
       rgba(255, 255, 255, 0.336)
     ),
-    url("/images/restaurant.jpg");
+    url("/images/home-showcase-image.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,7 +124,7 @@ body {
     rgba(240, 240, 240, 0.144),
     rgba(255, 255, 255, 0.336)
   ),
-  url("/images/restaurant2.jpg");
+  url("/images/menu-showcase-image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -136,7 +137,7 @@ body {
     rgba(240, 240, 240, 0.144),
     rgba(255, 255, 255, 0.336)
   ),
-  url("/images/body-bg.jpg");
+  url("/images/contact-showcase-image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -286,7 +287,7 @@ body {
   font-weight: 700;
 }
 
-/* Contact Section */
+/* Reservations Page Section */
 
 #contact {
   padding: 5rem 0;
@@ -359,6 +360,23 @@ body {
   font-weight: 500;
   color: #fff;
   background: rgb(65, 65, 65);
+}
+
+/* Contact Page Section */
+.contact-map {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 600;            /* To look good on both Desktop and smaller screens/devices */
+  overflow: hidden;
+}
+
+.contact-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* Media Query - Smaller Screens / Devices */
@@ -471,7 +489,17 @@ body {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
   }
+
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
 }
+
 
 @media (max-width: 500px) {
   html {
@@ -481,11 +509,6 @@ body {
   .navbar .menu-items li{
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
-  }
-
-  .testimonial-container {
-    flex-direction: column;
-    text-align: center;
   }
 
   .food-menu-container img {
