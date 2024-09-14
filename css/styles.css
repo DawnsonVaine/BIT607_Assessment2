@@ -130,6 +130,19 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Reservations Page - Showcase Section */
+.showcase-area-reservations {
+  height: 50vh;
+  background: linear-gradient(
+    rgba(240, 240, 240, 0.144),
+    rgba(255, 255, 255, 0.336)
+  ),
+  url("/images/reservations-showcase-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Contact Page - Showcase Section */
 .showcase-area-contact {
   height: 50vh;
@@ -153,7 +166,7 @@ body {
   height: 100%;
   font-size: 1.6rem;
   color: white;
-  z-index: 1;               /* Ensures text appears in front of the background */
+  z-index: 1;
 }
 
 /* Darkened BG to read better */
@@ -164,7 +177,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
@@ -287,80 +300,20 @@ body {
   font-weight: 700;
 }
 
-/* Reservations Page Section */
 
-#contact {
+/* Reservations Form Section */
+#reservations {
   padding: 5rem 0;
   background: rgb(226, 226, 226);
 }
 
-.contact-container {
-  display: flex;
-  background: #fff;
-}
-
-.contact-img {
-  width: 50%;
-}
-
-.contact-img img {
-  display: block;
-  height: 400px;
-  width: 100%;
-  object-position: center;
-  object-fit: cover;
-}
-
 .form-container {
-  padding: 1rem;
-  width: 50%;
-  margin: auto;
-}
-
-.form-container input {
-  display: block;
+  padding: 0rem;
   width: 100%;
-  border: none;
-  border-bottom: 2px solid #ddd;
-  padding: 1rem 0;
-  box-shadow: none;
-  outline: none;
-  margin-bottom: 1rem;
-  color: #444;
-  font-weight: 500;
+  height: 1500;
+  align-self: center;
 }
 
-.form-container textarea {
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #ddd;
-  color: #444;
-  outline: none;
-  padding: 1rem 0;
-  resize: none;
-}
-
-.form-container h2 {
-  font-size: 2.7rem;
-  font-weight: 500;
-  color: #444;
-  margin-bottom: 1rem;
-  margin-top: -1.2rem;
-}
-
-.form-container a {
-  font-size: 1.3rem;
-}
-
-#footer h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  padding: 2.6rem;
-  font-weight: 500;
-  color: #fff;
-  background: rgb(65, 65, 65);
-}
 
 /* Contact Page Section */
 .contact-map {
@@ -379,9 +332,22 @@ body {
   border: 0;
 }
 
+
+/* Footer Section */
+#footer h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgb(65, 65, 65);
+}
+
 /* Media Query - Smaller Screens / Devices */
 
 @media (max-width: 1100px) {
+
+  /* Navigation Menu Section */
   .navbar {
     opacity: 0.95;
   }
@@ -490,6 +456,7 @@ body {
     transform-origin: 10% 90%;
   }
 
+  /* Food Page Section */
   .food-menu-container img {
     margin: auto;
   }
@@ -497,6 +464,21 @@ body {
   .food-menu-item {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Reservations Page Section */
+  .form-container {
+    width: 90%;
+  }
+
+  .reservations-container {
+    display: flex;
+    flex-direction: column;
+    height: 1700;
+  }
+  
+  .form-container iframe {
+    height: 1800;
   }
 }
 
@@ -506,32 +488,10 @@ body {
     font-size: 65%;
   }
 
+  /* Navigation Menu Section */
   .navbar .menu-items li{
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
-  }
-
-  .food-menu-container img {
-    margin: auto;
-  }
-
-  .food-menu-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .form-container {
-    width: 90%;
-  }
-
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact-img {
-    width: 90%;
-    margin: 3rem auto;
   }
 
   .logo {
@@ -545,6 +505,31 @@ body {
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
     font-weight: 500;
+  }
+
+  /* Menu Page Section */
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Reservations Page Section */
+  .form-container {
+    width: 90%;
+  }
+
+  .reservations-container {
+    display: flex;
+    flex-direction: column;
+    height: 1700;
+  }
+  
+  .form-container iframe {
+    height: 1800;
   }
 }
 
