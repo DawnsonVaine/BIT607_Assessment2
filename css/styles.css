@@ -5,7 +5,7 @@
 }
   
 html {
-    font-size: 62.5%;
+    font-size: 100%;
 }
   
 body {
@@ -16,28 +16,6 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: auto;
-}
-  
-.btn {
-    display: inline-block;
-    padding: .5em 1.5em;
-    text-decoration: none;
-    border-radius: 50px;
-    cursor: pointer;
-    outline: none;
-    margin-top: 1em;
-    text-transform: uppercase;
-    font-weight: small;
-}
-  
-.btn-primary {
-    color: #fff;
-    background: #16a083;
-}
-  
-.btn-primary:hover {
-    background: #117964;
-    transition: background 0.3s ease-in-out;
 }
   
 .navbar input[type="checkbox"], .navbar .hamburger-lines {
@@ -349,7 +327,7 @@ body {
   
 .contact-map {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 80%;
     height: 600;
     overflow: hidden;
 }
@@ -365,7 +343,7 @@ body {
 
 #footer {
     background: #414141;
-    height: auto;
+    margin-top: auto;
 }
 
 #footer h2 {
