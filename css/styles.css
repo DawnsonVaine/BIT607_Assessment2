@@ -1,639 +1,587 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-.html {
-  font-size: 62.5%;
+  
+html {
+    font-size: 62.5%;
 }
-
+  
 body {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-
-/* Utility Button Classes */
-
+  
 .container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
 }
-
+  
 .btn {
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  text-decoration: none;
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  margin-top: 1em;
-  text-transform: uppercase;
-  font-weight: small;
+    display: inline-block;
+    padding: .5em 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: small;
 }
-
+  
 .btn-primary {
-  color: #fff;
-  background: #16a083;
+    color: #fff;
+    background: #16a083;
 }
-
+  
 .btn-primary:hover {
-  background: #117964;
-  transition: background 0.3s ease-in-out;
+    background: #117964;
+    transition: background 0.3s ease-in-out;
 }
-
-/* Navigation Menu */
-/* Desktop Version */
-
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-  display: none;
-  cursor: pointer;
+  
+.navbar input[type="checkbox"], .navbar .hamburger-lines {
+    display: none;
+    cursor: pointer;
 }
-
+  
 .navbar {
-  box-shadow: 0px 5px 10px 0px #aaa;
-  position: fixed;
-  width: 100%;
-  background: #fff;
-  color: #000;
-  opacity: 0.85;
-  height: 50px;
-  z-index: 12;
+    box-shadow: 0 5px 10px 0 #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: .85;
+    height: 50px;
+    z-index: 12;
 }
-
+  
 .navbar-container {
     display: flex;
     justify-content: space-between;
     height: 64px;
     align-items: center;
 }
-
+  
 .menu-items {
     order: 2;
     display: flex;
 }
-
+  
 .menu-items li {
     list-style: none;
     margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
 }
-
+  
 .menu-items a {
     text-decoration: none;
     color: #444;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
-
+  
 .menu-items a:hover {
     color: #117964;
     transition: color 0.3s ease-in-out;
 }
-
+  
 .logo {
     order: 1;
     font-size: 2.3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
 }
-
-/* Home Page - Showcase Section */
-
+  
 .showcase-area {
     height: 50vh;
-    background: linear-gradient(
-      rgba(240, 240, 240, 0.144),
-      rgba(255, 255, 255, 0.336)
-    ),
-    url("../images/home-showcase-image.webp");
+    background: linear-gradient(rgb(240 240 240 / .144), rgb(255 255 255 / .336)), url(../images/home-showcase-image.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* Menu Page - Showcase Section */
-.showcase-area-menu {
-  height: 50vh;
-  background: linear-gradient(
-    rgba(240, 240, 240, 0.144),
-    rgba(255, 255, 255, 0.336)
-  ),
-  url("../images/menu-showcase-image.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Reservations Page - Showcase Section */
-.showcase-area-reservations {
-  height: 50vh;
-  background: linear-gradient(
-    rgba(240, 240, 240, 0.144),
-    rgba(255, 255, 255, 0.336)
-  ),
-  url("../images/reservations-showcase-image.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Opening Hours Page - Showcase Section */
-.showcase-area-hours {
-  height: 50vh;
-  background: linear-gradient(
-    rgba(240, 240, 240, 0.144),
-    rgba(255, 255, 255, 0.336)
-  ),
-  url("../images/hours-showcase-image.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Contact Page - Showcase Section */
-.showcase-area-contact {
-  height: 50vh;
-  background: linear-gradient(
-    rgba(240, 240, 240, 0.144),
-    rgba(255, 255, 255, 0.336)
-  ),
-  url("../images/contact-showcase-image.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Showcase - Text */
-.showcase-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 1.6rem;
-  color: white;
-  z-index: 1;
-}
-
-.showcase-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
-
-.main-title {
-  text-transform: uppercase;
-  margin-top: 1.5em;
-}
-
-
-/* Home Page Section */
-#about {
-  padding: 50px 0;
-  background: #f5f5f7;
-}
-
-.about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#about h2 {
-  font-size: 2.3rem;
-}
-
-#about p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-#about .small {
-  font-size: 1.2rem;
-  color: #666;
-  font-weight: 600;
-}
-
-.about-img {
-  flex: 1 1 400px;
-  padding: 30px;
-  transform: translateX(150%);
-  animation: about-img-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-img-animation {
-  100% {
-    transform: translate(0);
-  }
-}
-
-.about-text {
-  flex: 1 1 400px;
-  padding: 30px;
-  margin: auto;
-  transform: translate(-150%);
-  animation: about-text-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-text-animation {
-  100% {
-    transform: translate(0);
-  }
-}
-
-.about-img img {
-  display: block;
-  height: 400px;
-  max-width: 100%;
-  margin: auto;
-  object-fit: cover;
-  object-position: right;
-}
-
-
-/* Menu Page Section */
-.food-menu-heading {
-  text-align: center;
-  font-size: 3.4rem;
-  font-weight: 400;
-  color: #666;
-  border-bottom: 1px solid #ddd;
-}
-
-.food-menu-container {
-  display: flex;
-  flex-direction: column; /* Ensure items stack vertically */
-  padding: 50px 0 30px;
-}
-
-.food-menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Vertically center align items */
-  margin-bottom: 3rem; /* Optional: adds a separator line between items */
-  padding-bottom: 1rem; /* Optional: adds spacing below each item */
-  gap: 1.5rem;
-}
-
-.food-img {
-  flex: 0 0 250px; /* Set the image container width */
-  margin-bottom: 0rem;
-  padding-top: 4rem;
-}
-
-.food-img img {
-  width: 100%;
-  margin: auto;
-  max-height: 500;
-  border-radius: 50px;
-  object-fit: cover;
-}
-
-.food-description {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.food-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #444;
-}
-
-.food-price {
-  color: #117964;
-  font-weight: 700;
-  border-bottom: 1px solid #ddd;
-}
-
-#desserts {
-  padding-top: 3rem;
-}
-
-.beverages-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.beverages-menu-category {
-  flex: 1 1 45%; /* Ensures two categories take up 45% of the width each */
-  padding: 20px;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  box-sizing: border-box;
-  text-align: center right;
-  width:100%;
-}
-.beverages-menu-category .menu-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu-item {
-  padding: 5px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-/* Reservations Page Section */
-#reservations {
-  padding: 5rem 0;
-  background: rgb(226, 226, 226);
-}
-
-.form-container {
-  padding: 0rem;
-  width: 100%;
-  height: 1500;
-  align-self: center;
-}
-
-
-/* Hours Page Section */
-.calendar-area {
-  background: rgb(226, 226, 226);
-}
-.calendar-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-
-/* Contact Page Section */
-.contact-map {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 600;            /* To look good on both Desktop and smaller screens/devices */
-  overflow: hidden;
-}
-
-.contact-map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-
-/* Footer Section */
-#footer h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  padding: 2.6rem;
-  font-weight: 500;
-  color: #fff;
-  background: rgb(65, 65, 65);
-}
-
-
-/* Media Query - Smaller Screens / Devices */
-@media (max-width: 1100px) {
-
-  /* Navigation Menu Section */
-  .navbar {
-    opacity: 0.95;
-  }
-
-  .navbar-container input[type="checkbox"],
-  .navbar-container .hamburger-lines {
-    display: block;
-  }
-
-  .navbar-container {
-    display: block;
-    position: relative;
-    height: 64px;
-  }
-
-  .navbar-container input[type="checkbox"] {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 30px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-  }
-
-  .navbar-container .hamburger-lines {
-    display: block;
-    height: 23px;
-    width: 35px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .navbar-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #333;
-  }
-
-  .navbar-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .navbar-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .navbar-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .navbar .menu-items {
-    padding-top: 100px;
-    background: #fff;
-    height: 100vh;
-    max-width: 300px;
-    transform: translate(-150%);
-    display: flex;
-    flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
-    left: -100%;
-  }
-
-  .navbar .menu-items li {
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-
-  .logo {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 2rem;
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-    left:0;
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-  }
-
-  /* Menu Page Section */
-  .food-menu-container img {
-    margin: auto;
-  }
-
-  .food-menu-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* Reservations Page Section */
-  .form-container {
-    width: 90%;
-  }
-
-  .reservations-container {
-    display: flex;
-    flex-direction: column;
-    height: 1550;
-  }
   
-  .form-container iframe {
-    height: 1600;
-  }
+.showcase-area-menu {
+    height: 50vh;
+    background: linear-gradient(rgb(240 240 240 / .144), rgb(255 255 255 / .336)), url(../images/menu-showcase-image.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-@media (max-width: 768px) {
-  html {
-    font-size: 80%;
-  }
-
-  /* Menu Page Section */
-  .food-menu-item {
+  
+.showcase-area-reservations {
+    height: 50vh;
+    background: linear-gradient(rgb(240 240 240 / .144), rgb(255 255 255 / .336)), url(../images/reservations-showcase-image.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+.showcase-area-hours {
+    height: 50vh;
+    background: linear-gradient(rgb(240 240 240 / .144), rgb(255 255 255 / .336)), url(../images/hours-showcase-image.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+.showcase-area-contact {
+    height: 50vh;
+    background: linear-gradient(rgb(240 240 240 / .144), rgb(255 255 255 / .336)), url(../images/contact-showcase-image.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+.showcase-container {
+    position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .food-img {
-    width:50%;
-    margin-right: 0; /* Remove margin on smaller screens */
-    margin-bottom: 1rem; /* Space between image and text */
-    align-self: center;
-  }
-
-  .food-img img {
-    width: 100%; /* Ensure image width is responsive */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .food-description {
-    align-self: center;
-  }
-
-  .food-menu-container img {
-    margin: auto;
-  }
-
-  .food-menu-container .beverages {
-    min-width: 30%;
-  }
-
-  .beverages-menu-category h2 {
-    margin-bottom: 20px;
-  }
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+    color: #fff;
+    z-index: 1;
 }
-
-@media (max-width:600px) {
-  html {
-    font-size: 70%
-  }
+  
+.showcase-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / .6);
+    z-index: -1;
 }
-
-@media (max-width: 500px) {
-
-  /* Navigation Menu Section */
-  .navbar .menu-items li{
-    margin-bottom: 2.5rem;
-    font-size: 1.8rem;
-  }
-
-  .navbar .menu-items li {
-    margin-bottom: 2.5rem;
-    font-size: 1.8rem;
-    font-weight: 500;
-  }
-
-  /* Menu Page Section */
-  .food-menu-container img {
+  
+.main-title {
+    text-transform: uppercase;
+    margin-top: 1.5em;
+}
+  
+#about {
+    padding: 50px 0;
+    background: #f5f5f7;
+}
+  
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+#about h2 {
+    font-size: 2.3rem;
+}
+  
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+}
+  
+#about .small {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+}
+  
+.about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+  
+@keyframes about-img-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+  
+.about-text {
+    flex: 1 1 400px;
+    padding: 30px;
     margin: auto;
-  }
-
-  .food-menu-item {
-    flex-direction: column;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+  
+@keyframes about-text-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+  
+.about-img img {
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+}
+  
+.food-menu-heading {
     text-align: center;
-  }
-
-  /* Reservations Page Section */
-  .form-container iframe {
-    height: 1600;
-  }
-  .reservations-container {
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+  
+.food-menu-container {
     display: flex;
     flex-direction: column;
-    height: 1600;
-  }
+    padding: 50px 0 30px;
 }
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .img-container h3 {
+  
+.food-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    gap: 1.5rem;
+}
+  
+.food-img {
+    flex: 0 0 250px;
+    margin-bottom: 0rem;
+    padding-top: 4rem;
+}
+  
+.food-img img {
+    width: 100%;
+    margin: auto;
+    max-height: 500;
+    border-radius: 50px;
+    object-fit: cover;
+}
+  
+.food-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+  
+.food-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+}
+  
+.food-price {
+    color: #117964;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2rem;
+}
+  
+#desserts {
+    padding-top: 3rem;
+}
+  
+.beverages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+  
+.beverages-menu-category {
+    flex: 1 1 45%;
+    padding: 20px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    box-sizing: border-box;
+    text-align: center right;
+    width: 100%;
+}
+  
+.beverages-menu-category .menu-item {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.menu-item {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
     font-size: 1.5rem;
-  }
-
-  .img-container .btn {
-    font-size: 0.7rem;
-  }
 }
-
+  
+#reservations {
+    padding: 5rem 0;
+    background: #e2e2e2;
+}
+  
+.form-container {
+    padding: 0rem;
+    width: 100%;
+    height: 1500;
+    align-self: center;
+}
+  
+.calendar-area {
+    background: #e2e2e2;
+}
+  
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgb(0 0 0 / .2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+  
+.contact-map {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 600;
+    overflow: hidden;
+}
+  
+.contact-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+  
+#footer h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2.6rem;
+    font-weight: 500;
+    color: #fff;
+    background: #414141;
+}
+  
+@media (max-width: 1100px) {
+    .navbar {
+        opacity: .95;
+    }
+    
+    .navbar-container input[type="checkbox"], .navbar-container .hamburger-lines {
+        display: block;
+    }
+    
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0 10px 0 #aaa;
+        left: -100%;
+    }
+    
+    .navbar .menu-items li {
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 2rem;
+    }
+    
+    .navbar-container input[type="checkbox"]:checked~.menu-items {
+        transform: translateX(0);
+        left: 0;
+    }
+    
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+    
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+    
+    .food-menu-container img {
+        margin: auto;
+    }
+    
+    .food-menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .form-container {
+        width: 90%;
+    }
+    
+    .reservations-container {
+        display: flex;
+        flex-direction: column;
+        height: 1550;
+    }
+    
+    .form-container iframe {
+        height: 1600;
+    }
+}
+  
+@media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+    
+    .food-menu-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .food-img {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        align-self: center;
+    }
+    
+    .food-img img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .food-description {
+        align-self: center;
+    }
+    
+    .food-menu-container img {
+        margin: auto;
+    }
+    
+    .food-menu-container .beverages {
+        min-width: 30%;
+    }
+    
+    .beverages-menu-category h2 {
+        margin-bottom: 20px;
+    }
+}
+  
+@media (max-width: 600px) {
+    html {
+        font-size: 70%;
+    }
+}
+  
+@media (max-width: 500px) {
+    .navbar .menu-items li {
+        margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+    }
+    
+    .navbar .menu-items li {
+        margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    
+    .food-menu-container img {
+        margin: auto;
+    }
+    
+    .food-menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .form-container iframe {
+        height: 1600;
+    }
+    
+    .reservations-container {
+        display: flex;
+        flex-direction: column;
+        height: 1600;
+    }
+}
+  
+@media (min-width: 769px) and (max-width: 1200px) {
+    .img-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    .img-container .btn {
+        font-size: .7rem;
+    }
+}
+  
 @media (orientation: landscape) and (max-height: 500px) {
-  .showcase-area {
-    height: 50vmax;
-  }
+    .showcase-area {
+        height: 50vmax;
+    }
 }
+  
