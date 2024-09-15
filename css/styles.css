@@ -233,7 +233,6 @@ body {
 .food-img img {
     width: 100%;
     margin: auto;
-    max-height: 500;
     border-radius: 50px;
     object-fit: cover;
 }
@@ -273,7 +272,7 @@ body {
     padding-left: 10rem;
     padding-right: 10rem;
     box-sizing: border-box;
-    text-align: center right;
+    text-align: right;
     width: 100%;
 }
   
@@ -302,7 +301,6 @@ body {
 .form-container {
     padding: 0rem;
     width: 100%;
-    height: 1500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,7 +326,6 @@ body {
 .contact-map {
     position: relative;
     padding-bottom: 80%;
-    height: 600;
     overflow: hidden;
 }
   
@@ -478,11 +475,6 @@ body {
     .reservations-container {
         display: flex;
         flex-direction: column;
-        height: 1550;
-    }
-    
-    .form-container iframe {
-        height: 1600;
     }
 }
   
@@ -552,14 +544,9 @@ body {
         text-align: center;
     }
     
-    .form-container iframe {
-        height: 1600;
-    }
-    
     .reservations-container {
         display: flex;
         flex-direction: column;
-        height: 1600;
     }
 }
   
